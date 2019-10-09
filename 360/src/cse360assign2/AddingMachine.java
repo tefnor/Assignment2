@@ -11,33 +11,49 @@ public class AddingMachine {
 	//Private integer total
 	private int total;
 	
+	//Going to keep track addition and subtractions
+	private String history;
+	
 	//Just sets total equal to zero in this method.
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
 	}
 	
-	//Blank method besides returning 0
+	//Returns the integer total
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
-	//Blank method does not do anything yet.
+	//Adds a value to the total
 	public void add (int value) {
 		
+		//Adds to the total
+		total = total + value;
+		
+		//This add the value to history of transactions
+		history = history + " + " + value;
 	}
 	
-	//Blank method does not do anything yet.
+	//Subtracts a value from the total
 	public void subtract (int value) {
 		
+		//Subtracts to the total
+		total = total - value;
+		
+		//This add the value to history of transactions
+		history = history + " - " + value;
+		
 	}
 		
-	//Blank method does not do anything yet.
+	//Returns all of the whole math problem and its history.
 	public String toString () {
-		return "";
+		return history;
 	}
 
-	//Blank method does not do anything yet.
+	//Clears the total and history
 	public void clear() {
-	
+		total = 0;
+		
+		history = "0";
 	}
 }
